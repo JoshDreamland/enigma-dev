@@ -83,14 +83,14 @@ int lang_CPP::module_write_fonts(EnigmaStruct *es, FILE *gameModule)
     cout << "The dimensions of glyph " << ii << "are " << flush << es->fonts[i].glyphs[ii].width << "x" << es->fonts[i].glyphs[ii].height << "." << endl;
     cout << "End of list." << endl;*/
 	
-	
+	g
 
     // Copy our glyph metrics into it
 	size_t ib = 0;
 	for (int ii = 0; ii < es->fonts[i].glyphRangeCount; ii++) {
-		GlyphRange glyphRange = es->fonts[i].glyphRanges[ii];
+		GlyphRange &glyphRange = es->fonts[i].glyphRanges[ii];
 		for (int ig = 0; ig < glyphRange.rangeMax - glyphRange.rangeMin; ig++) {
-			Glyph glyph = es->fonts[i].glyphRanges[ii].glyphs[ig];
+			Glyph glyph = glyphRange.glyphs[ig];
 			boxes[ib].w = glyph.width,
 			boxes[ib].h = glyph.height;
 			ib++;
