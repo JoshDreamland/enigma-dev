@@ -1,6 +1,6 @@
 /********************************************************************************\
 **                                                                              **
-**  Copyright (C) 2011 Harijs Grînbergs                                         **
+**  Copyright (C) 2011 Harijs GrÃ®nbergs                                         **
 **  Modified 2013 by Josh Ventura                                               **
 **                                                                              **
 **  This file is a part of the ENIGMA Development Environment.                  **
@@ -36,11 +36,11 @@ using std::multimap;
 #endif
 
 #ifdef COLLISION_NONE
-	#error Error, The motion planning extension requires a collision system.
+#  error Error, The motion planning extension requires a collision system.
 #endif
 
 #ifndef PATH_EXT_SET
-	#error Error, The motion planning extension requires the paths extension.
+#  error Error, The motion planning extension requires the paths extension.
 #endif
 
 namespace enigma
